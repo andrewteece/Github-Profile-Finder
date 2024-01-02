@@ -1,0 +1,130 @@
+/* Font */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+/* CSS Reset */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Body Styles */
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Poppins', sans-serif;
+  background-color: hsl(240, 46%, 31%);
+  color: hsl(0, 0%, 100%);
+  overflow: hidden;
+}
+
+/* Form Styles */
+
+.user--form {
+  width: 100%;
+  max-width: 43.75rem;
+}
+
+.user--form input {
+  width: 100%;
+  display: block;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+  font-size: 1rem;
+  background-color: hsl(263, 54%, 34%);
+  color: hsl(0, 0%, 100%);
+  border: none;
+  border-radius: 0.625rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.user--form input::placeholder {
+  color: hsl(0, 0%, 73%);
+}
+
+.user--form input:focus {
+  outline: none;
+}
+
+/* Card Styles */
+
+.card {
+  display: flex;
+  max-width: 50rem;
+  padding: 3rem;
+  margin: 0 1.5rem;
+  background-color: hsl(263, 54%, 34%);
+  border-radius: 1.25rem;
+  box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+    0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.card__avatar {
+  width: 9.375rem;
+  height: 9.375rem;
+  border: 10px solid hsl(240, 46%, 31%);
+  border-radius: 50%;
+}
+
+.card__user--info {
+  margin-left: 2rem;
+  color: hsl(0, 0%, 93%);
+}
+
+.card__user--info h2 {
+  margin-top: 0;
+}
+
+.card__user--info ul {
+  display: flex;
+  justify-content: space-between;
+  max-width: 25rem;
+  padding-bottom: 0.5rem;
+  list-style-type: none;
+}
+
+.card__user--info ul li {
+  display: flex;
+  align-items: center;
+}
+
+.card__user--info ul li strong {
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.card__user--repos {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 10px;
+  font-size: 0.8rem;
+  background-color: hsl(233, 55%, 29%);
+  color: hsl(0, 0%, 100%);
+}
+
+/* Media Query */
+
+@media (max-width: 31.25rem) {
+  .card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user--form {
+    max-width: 25rem;
+  }
+}
