@@ -28,6 +28,12 @@ body {
   overflow: hidden;
 }
 
+/* Utility Classes */
+
+.flow-content > * + * {
+  margin-top: 1.5rem;
+}
+
 /* Form Styles */
 
 .user--form {
