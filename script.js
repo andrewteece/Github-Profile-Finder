@@ -58,3 +58,39 @@ function createUserCard(user) {
 
     main.innerHTML = cardHTML
 }
+
+function createErrorCard(msg) {
+    const cardHTML = `
+    <div class='card>
+        <h1>${msg}</h1>
+    </div>
+    `
+
+    main.innerHTML = cardHTML
+}
+
+function addReposToCard(repos) {
+    const reposEl = document.getElementById('repos')
+
+    repos
+        .slice(0, 5)
+        .forEach(repo => {
+            const reposEl = document.createElement('a')
+            reposEl.href = repo.html_url
+            reposEl.target = '_blank'
+            reposEl.innerText = repos.name
+        })
+}
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+
+    const user = search.value
+
+    if (user) {
+        getUser(user)
+
+        search.value = ''
+    }
+})
+
